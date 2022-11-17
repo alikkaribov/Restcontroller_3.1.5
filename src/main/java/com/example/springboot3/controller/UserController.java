@@ -1,6 +1,8 @@
 package com.example.springboot3.controller;
 
+import com.example.springboot3.service.RoleService;
 import com.example.springboot3.service.RoleServiceImpl;
+import com.example.springboot3.service.UserService;
 import com.example.springboot3.service.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -11,11 +13,12 @@ import org.springframework.web.bind.annotation.*;
 import com.example.springboot3.entity.User;
 
 @Controller
+@RequestMapping(value = "/")
 public class UserController {
-    private UserServiceImpl userService;
-    private RoleServiceImpl roleService;
-    @Autowired
-    public UserController(UserServiceImpl userService, RoleServiceImpl roleService) {
+    private final UserService userService;
+    private final RoleService roleService;
+
+    public UserController(UserService userService, RoleService roleService) {
         this.userService = userService;
         this.roleService = roleService;
     }

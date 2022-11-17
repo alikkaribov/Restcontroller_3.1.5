@@ -20,7 +20,7 @@ public class User implements UserDetails {
     private String email;
     @Column(name = "password")
     private String password;
-    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
+    @ManyToMany(fetch = FetchType.EAGER)
     private Set<Role> roles;
 
     public User(String username, String lastname, String email, String password, Set<Role> roles) {
