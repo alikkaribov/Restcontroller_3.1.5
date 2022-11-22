@@ -1,4 +1,4 @@
-package com.example.springboot3.security;
+package com.example.springboot3.config.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -10,7 +10,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import com.example.springboot3.handler.LoginSuccessHandler;
+import com.example.springboot3.config.handler.LoginSuccessHandler;
 
 @Configuration
 @EnableWebSecurity

@@ -1,10 +1,7 @@
 package com.example.springboot3.controller;
 
-import com.example.springboot3.entity.Role;
 import com.example.springboot3.entity.User;
-import com.example.springboot3.service.RoleService;
 import com.example.springboot3.service.UserService;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -15,11 +12,11 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "/api")
-public class UserRestController {
+public class AdminController {
 
     private UserService userService;
 
-    public UserRestController(UserService userService) {
+    public AdminController(UserService userService) {
         this.userService = userService;
     }
 
