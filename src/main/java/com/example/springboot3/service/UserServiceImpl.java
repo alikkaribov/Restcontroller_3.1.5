@@ -3,6 +3,7 @@ package com.example.springboot3.service;
 
 import com.example.springboot3.dao.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import java.util.List;
@@ -13,6 +14,7 @@ public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
     private BCryptPasswordEncoder bCryptPasswordEncoder;
     @Autowired
+    @Lazy
     public void setbCryptPasswordEncoder(BCryptPasswordEncoder bCryptPasswordEncoder) {
         this.bCryptPasswordEncoder = bCryptPasswordEncoder;
     }

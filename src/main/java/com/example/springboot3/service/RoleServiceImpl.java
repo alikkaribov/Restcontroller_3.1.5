@@ -9,18 +9,19 @@ import com.example.springboot3.dao.RoleRepository;
 import java.util.List;
 
 @Service
-@Transactional
 public class RoleServiceImpl implements RoleService {
     private RoleRepository roleRepository;
     @Autowired
     public void setRoleDao(RoleRepository roleRepository) {
         this.roleRepository = roleRepository;;
     }
+    @Transactional
     @Override
     public void addRole(Role role) {
         roleRepository.save(role);
     }
     @Override
+    @Transactional
     public void updateRole(Role role) {
         roleRepository.saveAndFlush(role);
     }
